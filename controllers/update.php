@@ -1,6 +1,6 @@
 <?php
 
-include_once './connection.php';
+include_once '../connection.php';
 
 try {
 
@@ -14,7 +14,7 @@ try {
         $query = 'UPDATE tasks SET task=?,description=?,expiration=? WHERE id=?';
         $sent = $conn->prepare($query);
         $sent->execute(array($task, $description, $expiration, $id));
-        header('location:index.php');
+        header('location:../index.php');
     }
 } catch (PDOException $e) {
     echo 'ERROR_CONSULT' . $e->getMessage() . '<br>';

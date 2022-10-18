@@ -34,15 +34,15 @@
             </div>
             <div class="col-6">
                 <?php if (!$_GET) : ?>
-                    <form class="text-start p-4 border border-1 border-info rounded-3" action="./create.php" method="POST">
+                    <form class="text-start p-4 border border-1 border-info rounded-3" action="controllers/create.php" method="POST">
                         <h2 class="text-center text-primary">Nueva Tarea</h2>
-                        <?php include_once './views/create-task.php' ?>
+                        <?php include_once 'views/create-task.php' ?>
                     </form>
                 <?php endif ?>
                 <?php if ($_GET) : ?>
-                    <form class="text-start p-4 border border-1 border-dark rounded-3" action="./update.php" method="GET">
+                    <form class="text-start p-4 border border-1 border-dark rounded-3" action="controllers/update.php" method="GET">
                         <h2 class="text-center text-success">Editar Tarea</h2>
-                        <?php include_once './views/update-task.php' ?>
+                        <?php include_once 'views/update-task.php' ?>
                     </form>
                 <?php endif ?>
             </div>
